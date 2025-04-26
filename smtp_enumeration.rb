@@ -19,6 +19,6 @@ end
 
 socket.close
 
-puts "Dönüt :"
+puts "Response :"
 puts "Banner: #{banner}"
-puts "Bulunan Kullanıcılar: \n#{found.join("\n")}"
+puts "Users found: \n#{found.join("\n")}"
