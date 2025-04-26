@@ -1,6 +1,6 @@
 require 'socket'
 
-kullanıcılar = %w{
+users = %w{
   root ftp operator msfadmin admin
   sysadmin sys root bin daemon
 }
@@ -10,7 +10,7 @@ found = []
 socket = TCPSocket.new('192.168.1.85', 25) # change this
 banner = socket.recv(1024).chomp
 
-kullanıcılar.each do |user|
+users.each do |user|
   socket.send "VRFY #{user} \n\r", 0
   response = socket.recv(1024).chomp
 
